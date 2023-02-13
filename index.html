@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app/css/style.css">
+</head>
+<body>
+  <h1>Farmacijos istorija</h1>
+ <h3>Įdomios vaistų atsiradimo istorijos</h3>
+  <div class="buttons">
+    <button class="button" onclick="showTab('pirmas')">Viagra (sildenafilis)</button>
+    <button class="button" onclick="showTab('antras')">Disulfiramas</button>
+    <button class="button" onclick="showTab('trecias')">Varfarinas</button>
+</div>
+<div class="tabs">
+    <div class="tab" id="pirmas">
+      <img src="app/images/Sildenafil.png" alt="viagra">
+      <p>1989 metais britų mokslininkai Peter Dunn ir Albert Wood Pfizer labaratorijoje sintezavo sildenafilio citratą - vaistą, kuris priklauso PDE5 inhibitorių klasei. Tyrimuose taikydami šį vaistą gydyti hipertenziją ir stenokardiją buvo atrastas neįprastas šalutinis poveikis, dėl kurio Viagra tapo pirmuoju vaistu skirtu gydyti erekcijos disfunkciją.</p>
+    </div>
+    <div class="tab" id="antras">
+      <img src="app/images/Disulfiram.png" alt="disulfiram">
+      <p>
+       Disulfiramas, pradžioje naudotas gumos gamybos pramonėje, veliau danų mokslinikų Jens Hald ir Erik Jacobsen bandytas pritaikyti kaip antiparazitinis preparatas taipogi pasireiškė neįprastu šalutiniu poveikiu kuomet mokslininkai suvartoję nedidelius kiekius disulfiramo nutarė pabaliavot ir apturėjo baisiausias pagirias savo gyvenime. Disulfiramas iki šiol skiriamas gydyti priklausomybę nuo alkoholio turinčius žmones.
+      </p>
+    </div>
+    <div class="tab" id="trecias">
+      <img src="app/images/Warfarin.svg.png" alt="warfarin">
+      <p>
+        Šiandien plačiai naudojamas antikoaguliantas savo vaisto "karjerą" pradėjo kuomet praeito amžiaus trečiam dešimtmetyje buvo pastebėta, jog galvijai nukraujuodavo ėsdami geltonžiedžio barkūno silosą ir 1940 metais Karl Link pavyko izoliuoti medžiagą, kuri ir buvo atsakinga už šias galvijų mirtis, tačiau tai tapo populiariais žiurkių nuodais iki kol tik 1954 metais FDA patvirtino varfarino vaisto statusą. 
+      </p>
+    </div>
+</div>
+
+<script>
+       
+  var tabs = document.getElementsByClassName("tab")
+
+  for(var tab of tabs){
+      tab.style.display = "none"
+  }
+  function showTab(name){
+
+      for(var tab of tabs){
+      tab.style.display = "none"
+  }
+  document.getElementById(name).style.display = "block"
+}
+showTab("pirmas")
+</script>
+</body>
+</html>

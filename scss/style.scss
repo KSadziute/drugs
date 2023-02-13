@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+h1, h3{
+  text-align: center;
+  margin: 50px;
+}
+
+body{
+  background: pink;
+}
+
+
+img{
+  width: 300px;
+  height: 180px;
+  margin: 50px;
+}
+
+.button{
+  margin: 50px;
+  height: 50px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 6px;
+  letter-spacing: 3px;
+  font-size: larger;
+  position: relative;
+  z-index: 0;
+  background: none;
+}
+
+.button::before{
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #00ffd5, #002bff, #7a00ff, #ff00c8);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(-5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glow 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.button:hover{
+ 
+cursor: pointer;
+}
+
+.button:hover::before{
+  opacity: 1;
+}
+
+.button:after{
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  left: 0;
+  top: 0;
+  border-radius: 6px;
+}
+
+@keyframes glow{
+  0%{
+    background-position: 00;
+  }
+  50%{
+    background-position: 400% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
+
+.tab{
+  border: 3px solid black;
+  width: 500px;
+  padding: 50px;
+  margin: 50px;
+  border-radius: 6px;
+}
+
+p{
+  text-align: center;
+}
